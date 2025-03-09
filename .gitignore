@@ -52,3 +52,7 @@ samconfig.toml
 
 # Log files
 *.log
+
+# Coverage reports
+.coverage
+htmlcov/
