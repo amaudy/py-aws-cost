@@ -32,10 +32,8 @@ jobs:
         coverage report
         coverage xml
 
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
+    - name: Upload coverage report as artifact
+      uses: actions/upload-artifact@v2
       with:
-        file: ./coverage.xml
-        flags: unittests
-        name: codecov-umbrella
-        fail_ci_if_error: true
+        name: coverage-report
+        path: coverage.xml
